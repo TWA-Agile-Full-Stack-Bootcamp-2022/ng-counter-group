@@ -22,14 +22,14 @@ describe('CounterGroupComponent', () => {
   });
 
   it('should increase counter when increase button is clicked', () => {
-    component.counterCount = 1;
+    component.numbers = [0];
     component.onIncrease();
-    expect(component.counterCount).toBe(2);
+    expect(component.numbers.length).toBe(2);
   });
 
   it('should decrease counter when decrease button is clicked', () => {
-    component.counterCount = 1;
+    component.numbers = [0];
     component.onDecrease();
-    expect(component.counterCount).toBe(0);
+    expect(component.numbers.length).toBe(0);
   });
 });

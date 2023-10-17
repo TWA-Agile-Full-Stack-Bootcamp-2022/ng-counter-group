@@ -1,5 +1,10 @@
-<nz-space nzAlign="center">
-  <button *nzSpaceItem nz-button nzType="primary" (click)="onIncrease()">+</button>
-  <div *naSpaceItem>{{counterCount}}</div>
-  <button *nzSpaceItem nz-button nzType="primary" (click)="onDecrease()">-</button>
+<nz-space nzDirection="vertical">
+  <nz-space nzAlign="center" *nzSpaceItem>
+    <button *nzSpaceItem nz-button nzType="primary" (click)="onIncrease()">+</button>
+    <div *nzSpaceItem> {{numbers.length}} </div>
+    <button *nzSpaceItem nz-button nzType="primary" (click)="onDecrease()">-</button>
+  </nz-space>
+  <ng-container *ngFor="let number of numbers">
+    <app-counter *nzSpaceItem></app-counter>
+  </ng-container>
 </nz-space>

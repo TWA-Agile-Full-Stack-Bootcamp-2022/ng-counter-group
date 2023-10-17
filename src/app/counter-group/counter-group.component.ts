@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-counter-group',
@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter-group.component.css']
 })
 export class CounterGroupComponent {
-  counterCount = 0;
+  numbers: number[] = [];
 
   onIncrease(): void {
-    this.counterCount++;
+    this.numbers.push(0);
   }
 
   onDecrease(): void {
-    this.counterCount--;
+    this.numbers.pop();
   }
 }
