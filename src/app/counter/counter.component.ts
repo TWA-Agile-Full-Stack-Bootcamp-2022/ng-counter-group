@@ -19,4 +19,9 @@ export class CounterComponent  {
     this.counterChange.emit(this.counter);
   }
 
+  onReset(): void {
+    this.counter = 0;
+    this.counterChange.emit(this.counter);
+  }
+
 }

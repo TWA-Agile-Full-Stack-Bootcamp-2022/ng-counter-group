@@ -32,4 +32,10 @@ describe('CounterComponent', () => {
     component.onDecrease();
     expect(component.counter).toBe(0);
   });
+
+  it('should reset counter when reset button is clicked', () => {
+    component.counter = 1;
+    component.onReset();
+    expect(component.counter).toBe(0);
+  });
 });
