@@ -16,6 +16,9 @@
     <app-counter *nzSpaceItem [(counter)]="numbers[i]"></app-counter>
   </ng-container>
   <div *nzSpaceItem>
-    Sum: {{sum}}
+    <nz-space nzAlign="center">
+      <div *nzSpaceItem>Sum: {{sum}}</div>
+      <button *nzSpaceItem nz-button nzType="primary" (click)="onReset()">reset</button>
+    </nz-space>
   </div>
 </nz-space>

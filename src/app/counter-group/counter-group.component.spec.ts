@@ -43,4 +43,10 @@ describe('CounterGroupComponent', () => {
     component.onSetSize();
     expect(component.numbers).toEqual([0, 0, 0, 0, 0]);
   });
+
+  it('should reset counters when reset', () => {
+    component.numbers = [1, 2, 3];
+    component.onReset();
+    expect(component.numbers.length).toBe(0);
+  });
 });

@@ -33,4 +33,8 @@ export class CounterGroupComponent {
   trackByFn(index: number): number {
     return index;
   }
+
+  onReset(): void {
+    this.numbers = [];
+  }
 }
