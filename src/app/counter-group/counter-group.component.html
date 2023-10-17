@@ -7,4 +7,7 @@
   <ng-container *ngFor="let number of numbers;let i = index">
     <app-counter *nzSpaceItem [(counter)]="numbers[i]"></app-counter>
   </ng-container>
+  <div *nzSpaceItem>
+    Sum: {{sum}}
+  </div>
 </nz-space>

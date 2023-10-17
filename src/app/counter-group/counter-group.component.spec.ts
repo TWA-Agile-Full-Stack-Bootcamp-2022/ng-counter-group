@@ -32,4 +32,9 @@ describe('CounterGroupComponent', () => {
     component.onDecrease();
     expect(component.numbers.length).toBe(0);
   });
+
+  it('should sum all counters when call sum', () => {
+    component.numbers = [1, 2, 3];
+    expect(component.sum).toBe(6);
+  });
 });
