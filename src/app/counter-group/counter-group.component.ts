@@ -15,4 +15,8 @@ export class CounterGroupComponent {
   onDecrease(): void {
     this.numbers.pop();
   }
+
+  onCounterChange(index: number, count: number): void {
+    this.numbers[index] = count;
+  }
 }
