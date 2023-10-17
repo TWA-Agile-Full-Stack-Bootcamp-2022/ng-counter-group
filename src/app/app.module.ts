@@ -13,6 +13,7 @@ import { CounterComponent } from './counter/counter.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { CounterGroupComponent } from './counter-group/counter-group.component';
 
 registerLocaleData(en);
 
@@ -20,6 +21,7 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     CounterComponent,
+    CounterGroupComponent,
   ],
   imports: [
     BrowserModule,
