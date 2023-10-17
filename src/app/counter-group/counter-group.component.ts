@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-counter-group',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CounterGroupComponent {
   numbers: number[] = [];
+  inputSize = new FormControl('');
 
   get sum(): number {
     return this.numbers.reduce((acc, cur) => acc + cur, 0);
@@ -20,7 +22,15 @@ export class CounterGroupComponent {
     this.numbers.pop();
   }
 
-  onCounterChange(index: number, count: number): void {
-    this.numbers[index] = count;
+
+  onSetSize(): void {
+    if (Number.isInteger(Number(this.inputSize.value))) {
+      console.log(Number(this.inputSize.value));
+      this.numbers = Array(Number(this.inputSize.value)).fill(0) as number[];
+    }
+  }
+
+  trackByFn(index: number): number {
+    return index;
   }
 }

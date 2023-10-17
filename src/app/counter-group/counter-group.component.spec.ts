@@ -8,7 +8,7 @@ describe('CounterGroupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CounterGroupComponent ]
+      declarations: [CounterGroupComponent]
     })
       .compileComponents();
 
@@ -36,5 +36,11 @@ describe('CounterGroupComponent', () => {
   it('should sum all counters when call sum', () => {
     component.numbers = [1, 2, 3];
     expect(component.sum).toBe(6);
+  });
+
+  it('should create counters when set size', () => {
+    component.inputSize.setValue('5');
+    component.onSetSize();
+    expect(component.numbers).toEqual([0, 0, 0, 0, 0]);
   });
 });
